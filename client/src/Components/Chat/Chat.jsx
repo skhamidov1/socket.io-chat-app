@@ -10,7 +10,7 @@ let socket;
 const Chat = ({ location }) => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
-  const socketEndpoint = "http://localhost:8080";
+  const socketEndpoint = "https://sk-chat-app-server.herokuapp.com/";
 
   const [data, setData] = useState("");
   const [messages, setMessages] = useState([]);
