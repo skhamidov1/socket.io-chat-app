@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: #212121;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 900px;
+  background: #2a4d69;
+  padding: 10px 5px;
+  margin: 0 auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  p {
+    color: white;
+  }
+  &__title {
+    margin: 0;
+    font: 300 30px "Montserrat", sans-serif;
+  }
+  &__room {
+    margin: 0;
+    font: 300 20px "Montserrat", sans-serif;
+  }
+  &__user {
+    margin: 0 10px 0 auto;
+    font: 300 20px "Montserrat", sans-serif;
+  }
+}
+
+.header img {
+  width: 50px;
+  margin-right: 5px;
+}
+
+.messages-container {
+  height: 600px;
+  width: 900px;
+  background: #adcbe3;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.form {
+  width: 900px;
+  background: #2a4d69;
+  margin: 0 auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.form .message-input {
+  width: 90%;
+  padding: 9px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+}
+
+.form .send-button {
+  width: 6%;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  background: #90ee90;
+}
+
+.justify-right {
+  margin: 10px 10px 10px auto;
+}
+
+.justify-left {
+  margin: 10px auto 10px 10px;
+}
+
+.single-message {
+  width: 50%;
+  border-radius: 6px;
+  padding: 10px 0;
+  background: #f2f2f2;
+}
+
+.single-message .header-container {
+  display: flex;
+  align-items: flex-end;
+}
+.single-message .message-name {
+  margin: 0 0 0 0.3rem;
+  font: 400 16px "Montserrat", "sans-serif";
+}
+.single-message .message-time {
+  margin: 0.3rem auto 1px 0.5rem;
+  color: rgb(0, 0, 0);
+  font: 400 11px "Montserrat", "sans-serif";
+}
+.single-message .message-description {
+  margin: 5px 0 0.5rem 0;
+  padding-left: 2rem;
+  font: 400 14px "Montserrat", "sans-serif";
+}
+
+.join-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  background-color: #1a1a1d;
+
+  &__inner-container {
+    width: 20%;
+  }
+
+  &__heading {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    font: 300 3rem "Montserrat", "sans-serif";
+    margin-bottom: 20px;
+  }
+
+  &__name-input,
+  &__room-input {
+    border-radius: 0;
+    padding: 15px 20px;
+    width: 100%;
+    margin: 0 0 20px 0;
+    font: 300 15px "Montserrat", "sans-serif";
+  }
+
+  &__submit {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #2979ff;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    width: 100%;
+    font: 300 1rem "Montserrat", "sans-serif";
+  }
+}
