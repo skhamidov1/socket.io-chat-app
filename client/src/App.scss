@@ -1,31 +1,40 @@
 * {
   box-sizing: border-box;
 }
-
+#root {
+  height: 100vh;
+}
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100vh;
   background: #212121;
+  @media only screen and (min-width: 900px) {
+    justify-content: center;
+  }
 }
 
 .header {
   display: flex;
   align-items: center;
-  width: 900px;
+  width: 100%;
   background: #2a4d69;
   padding: 10px 5px;
   margin: 0 auto;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  height: 75px;
+  // border-top-left-radius: 5px;
+  // border-top-right-radius: 5px;
   p {
     color: white;
   }
   &__title {
     margin: 0;
     font: 300 30px "Montserrat", sans-serif;
+    display: none;
+    @media only screen and (min-width: 600px) {
+      display: block;
+    }
   }
   &__room {
     margin: 0;
@@ -35,6 +44,9 @@ body {
     margin: 0 10px 0 auto;
     font: 300 20px "Montserrat", sans-serif;
   }
+  @media only screen and (min-width: 900px) {
+    width: 900px;
+  }
 }
 
 .header img {
@@ -43,27 +55,42 @@ body {
 }
 
 .messages-container {
-  height: 600px;
-  width: 900px;
+  height: calc(100% - 70px);
+  overflow-y: scroll;
+  width: 100%;
+  // width: 900px;
   background: #adcbe3;
   margin: 0 auto;
-  padding-top: 10px;
+  padding: 10px 0 70px 0;
+  position: relative;
+  overflow-y: scroll;
+  @media only screen and (min-width: 900px) {
+    width: 900px;
+  }
 }
 
 .form {
-  width: 900px;
+  width: 100%;
   background: #2a4d69;
   margin: 0 auto;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  // border-bottom-left-radius: 5px;
+  // border-bottom-right-radius: 5px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  @media only screen and (min-width: 900px) {
+    width: 900px;
+    margin: 0 auto;
+  }
 }
 
 .form .message-input {
-  width: 90%;
+  width: 80%;
   padding: 9px 10px;
   border-radius: 5px;
   border: none;
@@ -73,7 +100,7 @@ body {
 }
 
 .form .send-button {
-  width: 6%;
+  width: 10%;
   border-radius: 5px;
   border: none;
   height: 40px;
@@ -96,8 +123,9 @@ body {
 .single-message {
   width: 50%;
   border-radius: 6px;
-  padding: 10px 0;
+  padding: 10px 5px;
   background: #f2f2f2;
+  word-break: break-all;
 }
 
 .single-message .header-container {
@@ -118,6 +146,11 @@ body {
   padding-left: 2rem;
   font: 400 14px "Montserrat", "sans-serif";
 }
+// @media only screen and (max-width: 600px) {
+//   body {
+//     background-color: lightblue;
+//   }
+// }
 
 .join-container {
   display: flex;
@@ -128,7 +161,7 @@ body {
   background-color: #1a1a1d;
 
   &__inner-container {
-    width: 20%;
+    width: 350px;
   }
 
   &__heading {
@@ -136,7 +169,8 @@ body {
     padding-bottom: 10px;
     border-bottom: 2px solid white;
     font: 300 3rem "Montserrat", "sans-serif";
-    margin-bottom: 20px;
+    width: 100%;
+    margin: 0 auto 20px;
   }
 
   &__name-input,

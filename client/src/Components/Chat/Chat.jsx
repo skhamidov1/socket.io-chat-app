@@ -69,6 +69,7 @@ const Chat = ({ location }) => {
           name="message"
           onChange={e => setMessage(e.target.value)}
           className="message-input"
+          value={message}
         />
         <input
           type="submit"
